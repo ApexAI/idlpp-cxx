@@ -3,9 +3,9 @@
 #
 cmake_minimum_required(VERSION 3.7)
 
-find_package(Maven 3.0 REQUIRED)
+find_package(Maven 3.0)
 if(NOT Maven_FOUND)
-    message("Maven installation not found! Please install maven package.")
+    message(FATAL_ERROR "Maven installation not found! Please install maven package.")
 endif()
 find_package(Java 1.8 REQUIRED)
 
